@@ -1,15 +1,18 @@
 import {Card} from "@mui/material";
 import {Column} from "./column";
 
-interface cardCampeonatoInterface {
+interface cardChampionshipInterface {
   reward?: string;
   place?: string;
-  name?: string;
   capacity?: string;
   status?: string;
+  winner?: string;
+  mvp?: string;
+  dates?: string;
+  teams?: string;
 }
 
-export const CardCampeonato = ({reward, name, place, capacity, status}: cardCampeonatoInterface) => {
+export const BigCardInfo = ({reward, place, capacity, status, mvp, winner, teams, dates}: cardChampionshipInterface) => {
   const styleCampInfo = ({
     fontSize:'0.8rem'
   });
@@ -18,16 +21,16 @@ export const CardCampeonato = ({reward, name, place, capacity, status}: cardCamp
     display:'flex',
     flexDirection:'column',
     backgroundColor:'#252525',
-    width:'23rem',
-    height:'15rem',
+    justifyContent:'center',
+    width:'100%',
+    height:'13rem',
     padding:'2rem',
-    gap:'1rem',
     color: '#fff',
-    borderRadius:'3%'
+    borderRadius:'1%'
   }
   return (
     <Card sx={cardStyle}>
-      <div style={{ fontSize:'1rem', width:'100%', display:'flex', justifyContent:'center', fontWeight:'bold'}}>{name}</div>
+      <div style={{ display:'flex', justifyContent:'space-between'}}>
 
       <Column gap={'1rem'}>
         <div style={styleCampInfo}><b>Premiação:</b> {reward}</div>
@@ -35,6 +38,17 @@ export const CardCampeonato = ({reward, name, place, capacity, status}: cardCamp
         <div style={styleCampInfo}><b>Lotação:</b> {capacity}</div>
         <div style={styleCampInfo}><b>Situação:</b> {status}</div>
       </Column>
+
+      <Column>
+        <div style={styleCampInfo}><b>Vencedor:</b> {winner}</div>
+        <div style={styleCampInfo}><b>MVP:</b> {mvp}</div>
+        <div style={styleCampInfo}><b>Datas:</b> {dates}</div>
+      </Column>
+
+      <Column>
+        <div style={styleCampInfo}><b>Equipes:</b> {teams}</div>
+      </Column>
+      </div>
     </Card>
   );
 }
