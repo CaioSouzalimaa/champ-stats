@@ -2,10 +2,21 @@ import Head from 'next/head'
 import {Sidebar} from "../components/sidebar";
 import {CardInfo} from "../components/card_info";
 import React from "react";
+import {useJogos} from "../hooks"
+import { useEffect } from 'react';
 
 export default function Home() {
+
+  const {getJogos} = useJogos();
+
+  useEffect(() => {
+    getJogos();
+  },[getJogos])
+
   return (
     <>
+      
+
       <Head>
         <title>Champstats</title>
       </Head>
