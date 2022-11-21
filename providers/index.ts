@@ -1,3 +1,3 @@
 import axios from 'axios';
 
-export const Api = axios.create({baseURL: 'https://champstats.braveground-00413869.eastus.azurecontainerapps.io'});
+export const Api = axios.create({baseURL: 'https://champstats.purpleglacier-6a593a11.eastus.azurecontainerapps.io'});
