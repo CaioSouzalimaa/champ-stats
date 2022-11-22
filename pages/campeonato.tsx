@@ -6,6 +6,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Link from "next/link";
 
 export default function Home2() {
+
   return (
     <>
       <Head>
