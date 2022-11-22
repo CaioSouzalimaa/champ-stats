@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
-import {BigCardInfo} from "../components/bigCardInfo";
-import {CardInfo} from "../components/card_info";
+import {BigCardInfo} from "../../components/bigCardInfo";
+import {CardInfo} from "../../components/card_info";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Link from "next/link";
 
